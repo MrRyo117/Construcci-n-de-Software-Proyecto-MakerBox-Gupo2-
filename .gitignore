@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+*.log
+*.bak
+*.tmp
+*.swp
+*~
+
+.idea/
+*.sublime-*
+
+.env
+.env.local
+.env.*.local
