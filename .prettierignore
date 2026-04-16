@@ -1,0 +1,10 @@
+# Ignore artifacts:
+build
+coverage
+.gitignore
+node_modules
+.husky
+package-lock.json
+package.json
+eslint.config.mjs
+.prettierrc
