@@ -12,7 +12,8 @@
   },
   "scripts": {
     "prepare": "husky",
-    "test": "jest"
+    "test": "jest",
+    "eslint:github-action": "eslint src/"
   },
   "lint-staged": {
     "*.{js,css}": "eslint",
