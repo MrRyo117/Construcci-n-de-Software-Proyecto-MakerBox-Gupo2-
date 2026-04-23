@@ -29,5 +29,5 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npx eslint src/
-    - run: npx jest --testPathPattern='\\.js\\.css$'
+    - run: npx jest -o
     
