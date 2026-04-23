@@ -12,7 +12,7 @@
   },
   "scripts": {
     "prepare": "husky",
-    "test": "jest",
+    "test:folder": "jest -o --src",
     "eslint:github-action": "eslint src/"
   },
   "lint-staged": {
