@@ -9,9 +9,15 @@ on:
   pull_request:
     branches: [ "main" ]
 
+
+
+
 jobs:
   build:
-
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
     runs-on: ubuntu-latest
     
     env:
@@ -29,4 +35,6 @@ jobs:
     - run: npx eslint src/
     - run: npx jest -o
     - run: npx semantic-release
-    
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
