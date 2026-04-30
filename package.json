@@ -6,15 +6,17 @@
     "eslint": "^10.2.0",
     "globals": "^17.5.0",
     "husky": "^9.1.7",
+    "jest": "^30.3.0",
     "lint-staged": "^16.4.0",
     "prettier": "3.8.3"
   },
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky",
+    "test:folder": "jest -o --src",
+    "eslint:github-action": "eslint src/"
   },
   "lint-staged": {
     "*.{js,css}": "eslint",
     "*.{js,html,css}": "prettier --write"
   }
-  
 }
