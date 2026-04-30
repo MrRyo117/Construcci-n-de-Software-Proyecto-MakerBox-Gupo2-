@@ -11,13 +11,12 @@ on:
 
 jobs:
   build:
-    env: 
-      NODE_VER: '24.x'
+
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [NODE_VER]
+        node-version: [22.x , 24.15]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
