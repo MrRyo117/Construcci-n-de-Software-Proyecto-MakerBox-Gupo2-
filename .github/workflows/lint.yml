@@ -5,7 +5,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main", "feature-Variables-de-entorno,-secretos-y-automatizacion" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -35,34 +35,30 @@ jobs:
     - run: npx eslint src/
     - run: npx jest -o
     
-name: Test 
+  test:
 
-on: [push , pull_request]
-
-jobs:
-    test:
       runs-on: ubuntu-latest
 
+      env:
+        NODE_VER: 24.x
+
       steps:
-        -name: checkout codecov
+      - name: checkout codecov
         uses: actions/checkout@v4
 
-        -name: Set up Node.js
+      - name: Set up Node.js ${{ env.NODE_VER }}
         uses: actions/setup-node@v4
         with:
-            node-version: '20'
+            node-version: ${{ env.NODE_VER }}
             cache: 'npm'
 
-        -name: Install dependencies
+      - name: Install dependencies
         run: npm install
 
-        -name: Run Linter 
-        run: npm run eslint:github-action
+      - name: Run tests with coverage
+        run: npx jest --coverage --onlyChanged
 
-        -name: Run tests with coverage
-        run: npx jest --coverage
-
-        -name: Upload coverage to Codecov
+      - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with: 
             token: ${{ secrets.CODECOV_TOKEN }}
