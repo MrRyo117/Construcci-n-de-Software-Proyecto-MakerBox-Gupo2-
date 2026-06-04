@@ -1,4 +1,4 @@
-const Impresiones = requiere('../../src/backend/Usuario.js')
+const Impresiones = require('../../src/backend/Impresion.js')
 
 describe("Test de Impresiones",() => {
     test("Constructor creado correctamente", ()=>{
