@@ -1,4 +1,4 @@
-const Impresiones = require('../../src/backend/Impresion.js')
+const Impresion = require('../../src/backend/Impresion.js')
 
 describe("Test de Impresiones",() => {
     test("Constructor creado correctamente", ()=>{
@@ -7,12 +7,12 @@ describe("Test de Impresiones",() => {
             Estado: "Pendiente"
         }
 
-        const Impresion = new Impresion(
+        const impresion = new Impresion(
             datosEjemplo.id,
             datosEjemplo.Estado
         );
 
-        expect(Impresion.id).toBe(datosEjemplo.id);
-        expect(Impresion.Estado).toBe(datosEjemplo.Impresion);
+        expect(impresion.id).toBe("001");
+        expect(impresion.Estado).toBe(datosEjemplo.Estado);
     });
 });
