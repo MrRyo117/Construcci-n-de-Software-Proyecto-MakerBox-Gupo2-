@@ -10,4 +10,4 @@ class Usuario{
     }
 }
 
-GPUShaderModule.exports = Usuario;
+module.exports = Usuario;

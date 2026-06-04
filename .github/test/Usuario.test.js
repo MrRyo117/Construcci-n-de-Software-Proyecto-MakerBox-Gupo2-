@@ -1,4 +1,4 @@
-const Usuario = require('../../src/backend/Usuario')
+const Usuario = require('../../src/backend/Usuario.js')
 
 describe("Pruebas de Usuario ", () =>{
     test('El constructor se asigna correctamente', ()=> {
