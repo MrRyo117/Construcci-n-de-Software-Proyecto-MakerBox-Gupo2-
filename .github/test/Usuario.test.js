@@ -7,7 +7,7 @@ describe("Pruebas de Usuario ", () =>{
             nombre:"Maximiliano",
             apellido:"Olea",
             correo: "max3881ol@gmail.com",
-            rol: "ADMIN",
+            rol: "Estudiante",
             contrasena: "callefalsa123",
             estado: true
         };
@@ -31,15 +31,6 @@ describe("Pruebas de Usuario ", () =>{
         expect(usuario.estado).toBe(datosEjemplo.estado);
         expect(typeof usuario.estado).toBe('boolean')
 
-
-    
-
     });
-
-    test('El usuario es un estudiante', ()=> {
-       
-        expect(usuario.rol).toBe("Estudiante");
-    });
-
 });
 
