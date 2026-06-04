@@ -1,7 +1,7 @@
 const ReservasSala = require('../../src/backend/ReservasSala.js')
 
 
-describe("Pruebas de la clase RerervasSala", ()=>{
+describe("Pruebas de la clase ReservasSala", ()=>{
     test('El constructor asigna los atributos correctamente según el diagrama de clase', () =>{
         const ayudanteMOCK = {id: "AYU-01", nombre: 'Joaquin'};
         const bloquesMOCK =[
