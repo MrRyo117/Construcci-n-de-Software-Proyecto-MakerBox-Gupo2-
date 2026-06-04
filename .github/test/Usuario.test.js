@@ -37,9 +37,31 @@ describe("Pruebas de Usuario ", () =>{
     });
 
     test('El usuario es un estudiante', ()=> {
+        const datosEjemplo = {
+            id: "002",
+            nombre:"Maria",
+            apellido:"Olea",
+            correo: "mar41ol@gmail.com",
+            rol: "ADMIN",
+            contrasena: "ws3r1n",
+            estado: true
+        };
        
-        expect(usuario.rol).toBe("Estudiante");
+
+        const usuario2 = new Usuario(
+            datosEjemplo.id,
+            datosEjemplo.nombre,
+            datosEjemplo.apellido,
+            datosEjemplo.correo,
+            datosEjemplo.rol,
+            datosEjemplo.contrasena,
+            datosEjemplo.estado
+        );
+
+
+        expect(usuario2.rol).toBe("Estudiante");
     });
 
 });
+
 
