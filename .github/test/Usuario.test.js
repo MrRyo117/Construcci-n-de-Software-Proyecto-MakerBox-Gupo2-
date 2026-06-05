@@ -42,11 +42,10 @@ describe("Pruebas de Usuario ", () =>{
             nombre:"Maria",
             apellido:"Olea",
             correo: "mar41ol@gmail.com",
-            rol: "ADMIN",
+            rol: "Estudiante",
             contrasena: "ws3r1n",
             estado: true
         };
-       
 
         const usuario2 = new Usuario(
             datosEjemplo.id,
