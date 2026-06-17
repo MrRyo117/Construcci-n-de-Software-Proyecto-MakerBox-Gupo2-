@@ -60,3 +60,12 @@ jobs:
         uses: codecov/codecov-action@v4
         with: 
             token: ${{ secrets.CODECOV_TOKEN }}
+      
+      - name: Convertir reporte de Jest en PDF 
+        run: npx html-pdf-cli coverage/lcov-report/index.html reporte-cobertura.pdf
+
+      - name: Guardar PDF como artefacto en github
+        uses: actions/upload-artifact@v4
+        with:
+          name: reporte-cobertura-pdf
+          path: reporte-cobertura.pdf
