@@ -62,7 +62,7 @@ jobs:
             token: ${{ secrets.CODECOV_TOKEN }}
       
       - name: Convertir reporte de Jest en PDF 
-        run: npx html-pdf-cli coverage/lcov-report/index.html reporte-cobertura.pdf
+        run: npx @marp-team/marp-cli --html -o reporte-cobertura.pdf coverage/lcov-report/index.html
 
       - name: Guardar PDF como artefacto en github
         uses: actions/upload-artifact@v4

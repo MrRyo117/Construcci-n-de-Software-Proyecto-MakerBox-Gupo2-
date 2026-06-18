@@ -5,14 +5,14 @@ class ReservasSala{
         fecha,
         estado,
         motivo,
-        bloqueReserva ,
+        bloqueaReserva ,
         ayudante ,
     ){
         this.id = id;
         this.fecha = fecha;
         this.estado = estado;
         this.motivo = motivo;
-        this.bloqueReserva = bloqueReserva;
+        this.bloqueaReserva = bloqueaReserva;
         this.ayudante = ayudante;
     }
 }

@@ -196,6 +196,7 @@ const config: Config = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
+  coverageReporters: ["json","lcov", "text", "clover"],
 };
 
 export default config;

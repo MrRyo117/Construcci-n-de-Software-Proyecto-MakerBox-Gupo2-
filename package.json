@@ -14,10 +14,13 @@
   "scripts": {
     "prepare": "husky",
     "test:folder": "jest -o --src",
-    "eslint:github-action": "eslint src/"
+    "eslint:github-action": "eslint src/",
+    "test": "jest"
   },
   "lint-staged": {
     "*.{js,css}": "eslint",
     "*.{js,html,css}": "prettier --write"
   }
-}
+  
+  }
+
