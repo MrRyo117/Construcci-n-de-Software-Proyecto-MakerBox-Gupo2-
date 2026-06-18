@@ -20,7 +20,8 @@
   "lint-staged": {
     "*.{js,css}": "eslint",
     "*.{js,html,css}": "prettier --write"
+  },
+  "dependencies": {
+    "pg": "^8.21.0"
   }
-  
-  }
-
+}
