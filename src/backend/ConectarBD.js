@@ -66,4 +66,30 @@ async function cerrarPool() {
   await pool.end();
 }
 
-module.exports = { agregarUsuario, existeUsuario, eliminarUsuario, cerrarPool };
+async function validarUsuario(rut, password) {
+  const cliente = await pool.connect();
+  try {
+    const resultado = await cliente.query(
+      "SELECT contrasena FROM usuarios WHERE rut = $1",
+      [rut],
+    );
+    if (resultado.rows.length === 0) {
+      return false; // Usuario no encontrado
+    }
+    const contrasenaAlmacenada = resultado.rows[0].contrasena;
+    return contrasenaAlmacenada === password;
+  } catch (error) {
+    console.error("Error al validar usuario:", error);
+    throw error;
+  } finally {
+    cliente.release();
+  }
+}
+
+module.exports = {
+  agregarUsuario,
+  existeUsuario,
+  eliminarUsuario,
+  cerrarPool,
+  validarUsuario,
+};
