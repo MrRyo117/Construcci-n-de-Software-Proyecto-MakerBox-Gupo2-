@@ -1,8 +1,12 @@
 {
+  "type": "module",
   "devDependencies": {
     "@eslint/css": "^1.1.0",
     "@eslint/js": "^10.0.1",
     "@eslint/json": "^1.2.0",
+    "@gatling.io/cli": "^3.15.102",
+    "@gatling.io/core": "^3.15.102",
+    "@gatling.io/http": "^3.15.102",
     "eslint": "^10.2.0",
     "globals": "^17.5.0",
     "husky": "^9.1.7",
@@ -15,7 +19,8 @@
     "prepare": "husky",
     "test:folder": "jest -o --src",
     "eslint:github-action": "eslint src/",
-    "test": "jest"
+    "test": "jest",
+    "test:performance": "npx gatling run --sources-folder performance --simulation usuarios"
   },
   "lint-staged": {
     "*.{js,css}": "eslint",
@@ -24,4 +29,6 @@
   "dependencies": {
     "pg": "^8.21.0"
   }
+
+
 }
