@@ -1,9 +1,9 @@
-const Usuario = require("../../src/backend/Usuario.js");
+const Usuario = require("../../src/backend/Usuario.cjs");
 const {
   existeUsuario,
   eliminarUsuario,
   cerrarPool,
-} = require("../../src/backend/ConectarBD.js");
+} = require("../../src/backend/ConectarBD.cjs");
 
 describe("Pruebas de Integracion - Agregar usuario a BD", () => {
   const RUT_TEST = "99999999-9";

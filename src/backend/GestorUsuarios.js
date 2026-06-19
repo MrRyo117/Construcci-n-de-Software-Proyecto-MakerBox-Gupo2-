@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const Usuario = require("./Usuario.js");
+const Usuario = require("./Usuario.cjs");
 
 class GestorUsuarios {
   constructor(rutaArchivo) {
