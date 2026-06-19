@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const Usuario = require("../../src/backend/Usuario.js");
+const Usuario = require("../../src/backend/Usuario.cjs");
 const GestorUsuarios = require("../../src/backend/GestorUsuarios.js");
 
 const rutaArchivoTest = path.join(__dirname, "usuarios_test.json");
@@ -40,6 +40,6 @@ describe("Pruebas de integracion - Usuario con GestorUsuarios", () => {
     expect(usuarioRecuperado.id).toBe(nuevoUsuario.id);
     expect(usuarioRecuperado.nombre).toBe("Matias");
     expect(usuarioRecuperado.correo).toBe("matias.olea@gmail.com");
-    expect(usuarioRecuperado.estado).toBe(true);
+    expect(usuarioRecuperado.activo).toBe(true);
   });
 });

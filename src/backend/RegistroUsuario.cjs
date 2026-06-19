@@ -1,6 +1,6 @@
-import readline from "node:readline/promises";
-import { stdin as input, stdout as output } from "node:process";
-import { agregarUsuario } from "./ConectarBD.js";
+const readline = require("node:readline/promises");
+const { stdin: input, stdout: output } = require("node:process");
+const Usuario = require("./Usuario.cjs"); 
 
 async function registrarUsuario() {
   const rl = readline.createInterface({ input, output });
@@ -14,10 +14,15 @@ async function registrarUsuario() {
     const correo = await rl.question("Correo: ");
     const contrasena = await rl.question("Contraseña: ");
     const rol = await rl.question("Rol: ");
-    await agregarUsuario(id, rut, nombre, apellido, correo, contrasena, rol);
-    console.log("Usuario registrado exitosamente.");
+
+    const nuevoUsuario = new Usuario(id, rut, nombre, apellido, correo, rol, contrasena);
+
+    console.log("->Rut guardado en instancia: ", nuevoUsuario.rut);
+    await nuevoUsuario.agregarUsuario();
+
+    console.log("Usuario registrado correctamente");
   } catch (error) {
-    console.error("Error al registrar usuario", error);
+    console.log(" Error al registrar el usuario:", error.message);
   } finally {
     rl.close();
   }
