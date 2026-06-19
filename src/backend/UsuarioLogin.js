@@ -1,4 +1,4 @@
-import {validarUsuario} from './ConectarBD.js';
+import {validarUsuario} from './ConectarBD.cjs';
 import readline from 'node:readline/promises';
 import { stdin as input, stdout as output } from 'node:process';
 
