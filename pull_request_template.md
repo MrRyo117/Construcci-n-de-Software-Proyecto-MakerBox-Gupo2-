@@ -1,6 +1,6 @@
 ## Descripción
-Implementa componente Header con navegación principal y manejo de estado de
-autenticación.
+
+
 ## Tipo de cambio
 - [] Feature (nueva funcionalidad)
 - [] Fix (corrección de bug)
