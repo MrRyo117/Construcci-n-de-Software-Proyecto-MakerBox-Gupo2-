@@ -20,6 +20,7 @@
     "test:folder": "jest -o --src",
     "eslint:github-action": "eslint src/",
     "test": "jest",
+    "start": "node -r dotenv/config src/backend/VincularGatlingConBD.js",
     "test:performance": "npx gatling run --sources-folder performance --simulation usuarios"
   },
   "lint-staged": {
@@ -27,7 +28,9 @@
     "*.{js,html,css}": "prettier --write"
   },
   "dependencies": {
-    "pg": "^8.21.0"
+    "dotenv": "^17.4.2",
+    "pg": "^8.22.0",
+    "express": "5.2.1"
   }
 
 

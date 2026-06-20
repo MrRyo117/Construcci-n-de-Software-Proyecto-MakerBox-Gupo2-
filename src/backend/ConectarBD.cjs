@@ -2,10 +2,10 @@ const { Pool } = require("pg");
 
 const pool = new Pool({
   user: "postgres",
-  password: "HaloDash117",
+  password: "pincheDiavolo", //actualmente hay que poner la contraseña propia que uno usa para ingresar a pgAdmin 4
   host: "localhost",
   port: 5432,
-  database: "MakerBox",
+  database: "MakerBox", //nombre de base de datos
 });
 
 async function agregarUsuario(
