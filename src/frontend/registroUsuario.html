@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro Makerbox</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <form action="">
+        <h1>Registro Makerbox</h1>
+
+        <div class="input-box">
+          <input
+            type="text"
+            id="Rut"
+            placeholder="Rut (ej: 12345678-9)"
+            required
+          />
+        </div>
+
+        <div class="input-box">
+          <input type="text" id="Nombre" placeholder="Nombre" required />
+        </div>
+
+        <div class="input-box">
+          <input type="text" id="Apellido" placeholder="Apellido" required />
+        </div>
+
+        <div class="input-box">
+          <input type="email" id="Correo" placeholder="Correo" required />
+        </div>
+
+        <div class="input-box">
+          <input
+            type="password"
+            id="Contraseña"
+            placeholder="Contraseña"
+            required
+          />
+        </div>
+
+        <div class="input-box">
+          <select id="Rol" required>
+            <option value="" disabled selected>Selecciona un rol</option>
+            <option value="Administrador">Administrador</option>
+            <option value="Profesor">Profesor</option>
+            <option value="Ayudante">Ayudante</option>
+            <option value="Estudiante">Estudiante</option>
+            <option value="Solicitante">Solicitante</option>
+          </select>
+        </div>
+
+        <button type="submit" id="submit" class="boton">Registro</button>
+
+        <div class="link-registro">
+          <p>
+            ¿Ya tienes una cuenta? <a href="index.html">Inicia sesión aquí</a>
+          </p>
+        </div>
+
+        <p id="respuestaRegistro"></p>
+      </form>
+    </div>
+    <script src="UsuarioRegistro.js"></script>
+  </body>
+</html>
